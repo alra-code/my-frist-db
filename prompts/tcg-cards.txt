@@ -1,0 +1,1 @@
+puxe as descrições/ informações da carta 'card-pokemom.png' e crie uma tabela para o postgreSQL, tbl_cards

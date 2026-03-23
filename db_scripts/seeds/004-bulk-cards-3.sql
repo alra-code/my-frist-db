@@ -1,0 +1,31 @@
+INSERT INTO tbl_collections (collection_name, release_date, total_cards_in_collection)
+VALUES 
+('EX Ruby & Sapphire', '2003-06-18', 109),
+('EX Sandstorm', '2003-09-18', 100),
+('EX Dragon', '2003-11-24', 97),
+('Diamond & Pearl Base Set', '2007-05-23', 130),
+('Mysterious Treasures', '2007-08-22', 123)
+ON CONFLICT DO NOTHING;
+
+INSERT INTO tbl_cards (name, hp, attack_name, damage_caused, illustrator, card_number_in_collection, category_id, type_id, collection_id)
+VALUES 
+('Blaziken', 100, 'Fire Stream', '50', 'Ken Sugimori', 3, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Fire'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Ruby & Sapphire')),
+('Swampert', 110, 'Hypno Splash', '30', 'Ken Sugimori', 13, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Water'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Ruby & Sapphire')),
+('Sceptile', 100, 'Tail Smash', '50', 'Ken Sugimori', 11, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Grass'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Ruby & Sapphire')),
+('Gardevoir', 100, 'Psychic Rage', '0', 'Ken Sugimori', 7, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Psychic'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Ruby & Sapphire')),
+('Aggron', 110, 'Metallic Claw', '50', 'Ken Sugimori', 1, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Metal'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Ruby & Sapphire')),
+('Wailord', 200, 'Drown Out', '50+', 'Ken Sugimori', 14, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 1'), (SELECT type_id FROM tbl_types WHERE type_name = 'Water'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Ruby & Sapphire')),
+('Slaking', 120, 'Lazy Blow', '100', 'Ken Sugimori', 12, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Colorless'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Ruby & Sapphire')),
+('Flygon', 120, 'Air Slash', '60', 'Ken Sugimori', 15, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Colorless'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Dragon')),
+('Salamence', 100, 'Dragon Engine', '0', 'Ken Sugimori', 10, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Colorless'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Dragon')),
+('Altaria', 80, 'Dragon Song', '30', 'Ken Sugimori', 2, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 1'), (SELECT type_id FROM tbl_types WHERE type_name = 'Colorless'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Dragon')),
+('Absol', 70, 'Bad Doom', '20+', 'Ken Sugimori', 1, (SELECT category_id FROM tbl_categories WHERE category_name = 'BASIC'), (SELECT type_id FROM tbl_types WHERE type_name = 'Darkness'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Sandstorm')),
+('Zangoose', 70, 'Target Slash', '20+', 'Ken Sugimori', 14, (SELECT category_id FROM tbl_categories WHERE category_name = 'BASIC'), (SELECT type_id FROM tbl_types WHERE type_name = 'Colorless'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Sandstorm')),
+('Seviper', 80, 'Poison Fang', '20', 'Ken Sugimori', 11, (SELECT category_id FROM tbl_categories WHERE category_name = 'BASIC'), (SELECT type_id FROM tbl_types WHERE type_name = 'Grass'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'EX Sandstorm')),
+('Turtwig', 60, 'Tackle', '10', 'Ken Sugimori', 103, (SELECT category_id FROM tbl_categories WHERE category_name = 'BASIC'), (SELECT type_id FROM tbl_types WHERE type_name = 'Grass'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'Diamond & Pearl Base Set')),
+('Chimchar', 50, 'Scratch', '10', 'Ken Sugimori', 76, (SELECT category_id FROM tbl_categories WHERE category_name = 'BASIC'), (SELECT type_id FROM tbl_types WHERE type_name = 'Fire'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'Diamond & Pearl Base Set')),
+('Piplup', 60, 'Peck', '10', 'Ken Sugimori', 93, (SELECT category_id FROM tbl_categories WHERE category_name = 'BASIC'), (SELECT type_id FROM tbl_types WHERE type_name = 'Water'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'Diamond & Pearl Base Set')),
+('Lucario', 90, 'Aura Sphere', '40', 'Ken Sugimori', 6, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 1'), (SELECT type_id FROM tbl_types WHERE type_name = 'Fighting'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'Diamond & Pearl Base Set')),
+('Empoleon', 130, 'Aqua Jet', '40', 'Ken Sugimori', 4, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Water'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'Diamond & Pearl Base Set')),
+('Infernape', 100, 'Flare Blitz', '90', 'Ken Sugimori', 5, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Fire'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'Diamond & Pearl Base Set')),
+('Torterra', 140, 'Leaf Storm', '60', 'Ken Sugimori', 9, (SELECT category_id FROM tbl_categories WHERE category_name = 'Stage 2'), (SELECT type_id FROM tbl_types WHERE type_name = 'Grass'), (SELECT collection_id FROM tbl_collections WHERE collection_name = 'Diamond & Pearl Base Set'));
