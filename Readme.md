@@ -20,21 +20,13 @@ O repositório demonstra o ciclo de vida de criação de um banco de dados, desd
 
 Seguindo uma organização profissional de migrações:
 
-```text
-E-CARDS/
-├── assets/              # Imagens e referências do projeto
-├── db_scripts/
-│   ├── seeds/          # Scripts de criação e alteração de tabelas
-│   ├── tables/           # População de dados em massa (mais de 100 cartas)
-│   └── views/           # Camada de visualização de dados
-│── prompts              # Comandos solicitados ao Gemini
-└── README.md
+![view](./assets/estrutura-do-projeto.png)
 
 ## 🔍 Resultado da Consulta (View)
 
 Abaixo, um exemplo de como os dados são exibidos de forma amigável ao usuário final através da View `vw_cards_details`. Note como os IDs internos são substituídos pelos nomes reais das coleções e tipos:
 
-![Resultado da View](./assets/view_result_print.png)
+![view](assets/view_result_print.png)
 
 ## 🛠️ Desafios e Soluções (Troubleshooting)
 
