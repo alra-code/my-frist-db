@@ -34,10 +34,7 @@ E-CARDS/
 
 Abaixo, um exemplo de como os dados são exibidos de forma amigável ao usuário final através da View `vw_cards_details`. Note como os IDs internos são substituídos pelos nomes reais das coleções e tipos:
 
-![Resultado da View](assets\view_result_print.png) 
-
-
----
+![Resultado da View](./assets/view_result_print.png)
 
 ## 🛠️ Desafios e Soluções (Troubleshooting)
 
